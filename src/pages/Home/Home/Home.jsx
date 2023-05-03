@@ -1,9 +1,11 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
 import './Home.css'
+import HomeChefDetail from "../../../HomeChefDetail/HomeChefDetail";
 
 
 const Home = () => {
+
   return (
     <div>
         <Container className="mt-5">
@@ -48,6 +50,11 @@ const Home = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+        </Container>
+
+        <Container>
+          <HomeChefDetail></HomeChefDetail>
 
         </Container>
       
