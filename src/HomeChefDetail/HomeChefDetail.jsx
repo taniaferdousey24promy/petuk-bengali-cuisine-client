@@ -18,7 +18,7 @@ const HomeChefDetail = () => {
         {chefs.map((chef) => (
           <Col key={chef.id}>
             <Card>
-              <Card.Img variant="top" src="holder.js/100px160" />
+              <Card.Img variant="top" src={chef.chief_photo} />
               <Card.Body>
                 <Card.Title>{chef.name}</Card.Title>
                 <Card.Text>
