@@ -1,2 +1,32 @@
-.set-image-carousel{
-  
+.class-carousel img{
+    filter: brightness(60%);
+
+}
+
+.carousel-caption.caption-top {
+    top: 0;
+    transform: translateY(10%);
+  }
+
+
+.carousel-control-prev a{
+    padding: 1;
+    border-radius: circle;
+    box-shadow: inset;
+}
+
+
+
+
+
+.event-heading{
+    background: url("https://cakeart.thimpress.com/wp-content/themes/cakeart/images/event-heading-bg.png") no-repeat center;
+
+    padding: 5px;
+    color: black;
+}
+
+.font{
+    font-family: Pacifico;
+
+}

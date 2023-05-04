@@ -24,7 +24,7 @@ const HomeChefDetail = () => {
 
                 <div className=" mt-3 d-flex justify-content-center">
 
-                <Button  >View Recipe</Button>
+                <Button variant="warning"  >View Recipe</Button>
 
 
                 </div>
