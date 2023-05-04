@@ -1,11 +1,38 @@
-import React from "react";
-import { Button, Carousel, Container } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Card, CardGroup, Carousel, Container } from "react-bootstrap";
 import { FaClock } from "react-icons/fa";
 
 import "./Home.css";
 import HomeChefDetail from "../../../HomeChefDetail/HomeChefDetail";
 
 const Home = () => {
+  const [chefs, setChefs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/chefs")
+      .then((res) => res.json())
+      .then((data) => setChefs(data))
+      .catch((error) => console.error(error));
+  });
+  const names = [];
+
+  chefs.forEach(({ name }) => names.push(name));
+  console.log(names);
+
+  
+
+  const fewRecipes = [];
+
+  chefs.forEach(({ recipes }) => fewRecipes.push(recipes[0].recipe_name));
+  console.log(fewRecipes);
+
+  const fewCookingMethod =[];
+
+  chefs.forEach(({recipes})=> fewCookingMethod.push(recipes[0].cooking_method));
+  console.log(fewCookingMethod);
+
+
+
+
   return (
     <div>
       {/* banner Carousel */}
@@ -154,6 +181,52 @@ const Home = () => {
           </Carousel.Item>
           
         </Carousel>
+      </Container>
+
+
+      {/* recent recipes */}
+
+      <h2>recent recipes</h2>
+
+      <Container>
+      <CardGroup className="w-100 style-size " >
+      <Card  >
+        <Card.Img variant="top" src="https://images.squarespace-cdn.com/content/v1/5ea5f3913b0ccf06d0ec2563/1618436042840-1K4D3WE91MDQNKXINABR/Pohela+Boishakh+2021+%287%29.jpg?format=2500w"  />
+        <Card.Body>
+          <Card.Title>{fewRecipes[0]}</Card.Title>
+          <Card.Text>
+          {fewCookingMethod[0]}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Updated By {names[0]} </small>
+        </Card.Footer>
+      </Card>
+      <Card className="ms-5 border-start">
+        <Card.Img variant="top" src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+        <Card.Body>
+          <Card.Title>{fewRecipes[1]}</Card.Title>
+          <Card.Text>
+            {fewCookingMethod[1]}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Updated By {names[1]}</small>
+        </Card.Footer>
+      </Card>
+      <Card className="ms-5 border-start">
+        <Card.Img variant="top" src="https://plus.unsplash.com/premium_photo-1672774750509-bc9ff226f3e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZnJlbmNoJTIwZnJpZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+        <Card.Body>
+          <Card.Title>{fewRecipes[2]}</Card.Title>
+          <Card.Text>
+          {fewCookingMethod[2]}
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Updated By {names[2]}</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
       </Container>
     </div>
   );
