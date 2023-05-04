@@ -85,8 +85,15 @@ const ChefDetails = ({ chef }) => {
           <Card className="text-start">
             <Card.Img variant="top" src={chefDetails.recipes[0].recipe_photo} />
             <Card.Body>
-              <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>{" "}
+                <span className="d-flex">
+                <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>
+              <FavouriteButton ></FavouriteButton>
+
+              
               <span className="text-success fs-5 fw-bold ms-5 ">MAIN DISH</span>
+
+                </span>
+              
               <Card.Title className=" mt-3 fs-2 fw-bold">
                 {chefDetails.recipes[0].recipe_name}
               </Card.Title>
@@ -117,8 +124,14 @@ const ChefDetails = ({ chef }) => {
           <Card className="ms-5 border-start text-start">
             <Card.Img variant="top" src={chefDetails.recipes[1].recipe_photo} />
             <Card.Body>
-              <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>
+            <span className="d-flex">
+                <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>
+              <FavouriteButton ></FavouriteButton>
+
+              
               <span className="text-success fs-5 fw-bold ms-5 ">MAIN DISH</span>
+
+                </span>
               <Card.Title className=" mt-3 fs-2 fw-bold">
                 {chefDetails.recipes[1].recipe_name}
               </Card.Title>
@@ -149,8 +162,14 @@ const ChefDetails = ({ chef }) => {
           <Card className="ms-5 border-start text-start">
             <Card.Img variant="top" src={chefDetails.recipes[2].recipe_photo} />
             <Card.Body>
-              <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>{" "}
+            <span className="d-flex">
+                <span className="text-success fs-5 fw-bold  ">GLUTEN FREE</span>
+              <FavouriteButton ></FavouriteButton>
+
+              
               <span className="text-success fs-5 fw-bold ms-5 ">MAIN DISH</span>
+
+                </span>
               <Card.Title className="  mt-3 fs-2 fw-bold">
                 {" "}
                 {chefDetails.recipes[2].recipe_name}
