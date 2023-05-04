@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ChefDetails from "../pages/ChefDetails/ChefDetails";
 
 const HomeChefDetail = () => {
   const [chefs, setChefs] = useState([]);
@@ -24,7 +25,11 @@ const HomeChefDetail = () => {
 
                 <div className=" mt-3 d-flex justify-content-center">
 
-                <Button variant="warning"  >View Recipe</Button>
+                <Link to={`chefDetails/${chef.id}`}>
+                <Button variant="warning" 
+                  
+
+                 >View Recipe</Button></Link>
 
 
                 </div>
