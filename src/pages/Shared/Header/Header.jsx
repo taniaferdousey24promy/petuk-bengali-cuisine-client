@@ -19,7 +19,7 @@ const Header = () => {
       
       <img   src={logo} width="300" height="200" className="d-inline-block align-text-top" alt="" />
 
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
+      <Navbar  collapseOnSelect expand="lg" bg="light"  >
       <Container>
       <Navbar.Brand href="#home">Petuk Banglai</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -40,7 +40,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        {user && <span className='text-white'>Welcome {user.email} <button onClick={handleLogout}>LoG out</button> </span>}
+        {user && <span className='text-white'>Welcome {user.email} <Button  variant="warning"  onClick={handleLogout}>LoG out</Button> </span>}
 
       </Container>
     </Navbar>

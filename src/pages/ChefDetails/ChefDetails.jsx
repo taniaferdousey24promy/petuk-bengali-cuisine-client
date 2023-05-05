@@ -8,7 +8,6 @@ import FavouriteButton from "./FavouriteButton/FavouriteButton";
 
 const ChefDetails = ({ chef }) => {
   const { id } = useParams();
-
   const chefDetails = useLoaderData();
   console.log(chefDetails);
 
@@ -75,7 +74,7 @@ const ChefDetails = ({ chef }) => {
 
       <Container className="text-center">
         <h1 className="my-5 text-success">Made With Love</h1>
-        <h3 className="text-warning">Personalized Food Coaching Programs</h3>
+        <h3 className="text-warning mb-5">Personalized Food Coaching Programs</h3>
         <CardGroup className="w-100 style-size ">
           <Card className="text-start">
             <Card.Img variant="top" src={chefDetails.recipes[0].recipe_photo} />

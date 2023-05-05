@@ -1,4 +1,8 @@
-.class-carousel img{
+.class-carousel .banner-carousel img{
+    filter: brightness(60%);
+
+}
+.banner-carousel img{
     filter: brightness(60%);
 
 }

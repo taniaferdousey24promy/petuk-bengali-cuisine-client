@@ -35,8 +35,8 @@ const Home = () => {
   return (
     <div>
       {/* banner Carousel */}
-      <Container className="mt-5">
-        <Carousel variant="dark">
+      <Container className="">
+        <Carousel className="banner-carousel" variant="white">
           <Carousel.Item interval={1000}>
 
             <img
@@ -46,8 +46,8 @@ const Home = () => {
               style={{ height: "600px", width: "1300px" }}
             />
             <Carousel.Caption>
-              <h1 className="lh-lg">Vegetables and Mashed Potatoes</h1>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              <h1 className="lh-lg font">Vegetables and Mashed Potatoes</h1>
+              <p className="fs-2">Embark on a gastronomic adventure with our Promet Fish, a harmonious blend of succulent flavors, perfectly accompanied by vibrant vegetables and velvety mashed potatoes. It's a symphony on your plate that will transport you to the culinary paradise of Bengal.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item interval={500}>
@@ -58,8 +58,8 @@ const Home = () => {
               style={{ height: "600px", width: "1300px" }}
             />
             <Carousel.Caption>
-              <h1 className="lh-lg">Fried Pomfret Fish</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1 className="font lh-lg">Fried Pomfret Fish</h1>
+              <p className="fs-2">Indulge in the ultimate comfort food: fluffy mashed potatoes accompanied by a vibrant symphony of farm-fresh vegetables. Our recipe is a delightful union of flavors and textures that will nourish both body and soul</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -70,10 +70,9 @@ const Home = () => {
               style={{ height: "600px", width: "1300px" }}
             />
             <Carousel.Caption>
-              <h1 className="lh-lg">Bengali Thali</h1>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
+              <h1 className=" font lh-lg">Bengali Thali</h1>
+              <p className="fs-2">
+              Immerse yourself in the richness of Bengali cuisine with our Bengali Thali, featuring the delectable Promet Fish, an assortment of aromatic vegetables, and a luscious bed of mashed potatoes. Let your taste buds dance to the rhythmic delights of authentic flavors from the heart of Bengal              </p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
@@ -85,6 +84,8 @@ const Home = () => {
 
       {/* class carousel */}
       <Container className="mt-5 class-carousel">
+
+        <h1 className="font mt-5 text-center mb-5">Class Schedules for eveyone</h1>
         <Carousel>
           <Carousel.Item interval={1000}>
             <img
@@ -199,7 +200,7 @@ const Home = () => {
 
       {/* recent recipes */}
 
-      <h2>recent recipes</h2>
+      <h1 className="font mt-5 text-center mb-5" >recent recipes</h1>
 
       <Container>
         <CardGroup className="w-100 style-size ">

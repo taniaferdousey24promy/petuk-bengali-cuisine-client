@@ -16,8 +16,8 @@ const HomeChefDetail = () => {
   });
   return (
     <div>
-      <h2>All chefs</h2>
-      <Row xs={1} md={2} className="g-4">
+      <h2 className="font mt-5 text-center" >Our chefs and their specialities</h2>
+      <Row xs={1} md={2} className="g-4 mt-5">
         {chefs.map((chef) => (
           <Col key={chef.id}>
             <Card>
