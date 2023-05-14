@@ -5,12 +5,12 @@ import { FaClock, FaRegStar, FaStar,FaHeart  } from "react-icons/fa";
 
 const FavouriteButton = () => {
     const [favButton,setFavButton]=useState(false);
-    // const handleFavButton =()=>{
+    const handleFavButton =()=>{
 
-    //     setFavButton(!favButton);
-    //     toast("Added to fav recipes");
+        setFavButton(!favButton);
+        // toast("Added to fav recipes");
         
-    //   }
+      }
     return (
         <div>
             <div>
